@@ -75,3 +75,18 @@ h1{
   color:white;
   background-color: green;
 }
+.form-field {
+  flex-direction: column;
+}
+
+.form-field input{
+  padding: 12px;
+    border-radius: 5px;
+    margin: 6px;
+}
+
+
+form{
+  width: 400px;
+  margin: auto;
+}

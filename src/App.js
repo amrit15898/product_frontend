@@ -6,6 +6,7 @@ import Hulk from './Components/Hulk';
 import Product from './Components/Product';
 import ShowProduct from './Components/ShowProduct';
 import Page404 from './Components/Page404';
+import Login from './Components/Login';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
        <Route path='/*' Component={Page404}/>
        <Route path='/product' Component={Product}/>
        <Route path='/showproduct' Component={ShowProduct}/>
+       <Route path='/login/' Component={Login}/>
        </Routes>
 
        </BrowserRouter>
