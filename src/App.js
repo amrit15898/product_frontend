@@ -7,6 +7,7 @@ import Product from './Components/Product';
 import ShowProduct from './Components/ShowProduct';
 import Page404 from './Components/Page404';
 import Login from './Components/Login';
+import ShowOneProduct from './Components/ShowOneProduct';
 
 function App() {
   return (
@@ -19,6 +20,8 @@ function App() {
        <Route path='/product' Component={Product}/>
        <Route path='/showproduct' Component={ShowProduct}/>
        <Route path='/login/' Component={Login}/>
+       <Route path='/showone' Component={ShowOneProduct}/>
+       <Route path='/show-one/:id' Component={ShowOneProduct}/>
        </Routes>
 
        </BrowserRouter>

@@ -90,3 +90,14 @@ form{
   width: 400px;
   margin: auto;
 }
+
+.content-div{
+  flex-direction: column;
+  border: 2px solid black;
+  align-items: center;
+
+}
+.content-div img {
+  width: 200px;
+  height: 200px;
+}

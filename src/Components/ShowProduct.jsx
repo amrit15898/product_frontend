@@ -1,14 +1,22 @@
 import React, {useEffect, useState} from 'react'
 import axios from 'axios'
 import '../App.css'
+import { Link } from 'react-router-dom'
 export default function ShowProduct() {
     
     const [data, setData] = useState([])
     const [loading , setLoading] = useState(true)
     const [error, setError] = useState(null)
-
+    
     useEffect(() => {
-        axios.get("http://127.0.0.1:8000/post-product")
+        const token =localStorage.getItem("token")
+        console.log(token)
+        axios.get("http://127.0.0.1:8000/post-product", {
+            headers : {
+                Authorization : `Bearer ${token}`
+
+            }
+        })
     .then(response => {
         console.log(response.data.data)
         setData(response.data.data)
@@ -48,9 +56,7 @@ export default function ShowProduct() {
                 <h3><b>Price:</b> {item.price}</h3>
                 <h2>{item.name}</h2>
 
-                <button className="btn">
-                    Buy
-                </button>
+                <Link to={`/show-one/${item.id}`} className="btn">Buy</Link>
 
             </div>
                 ))
